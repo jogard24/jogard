@@ -1,0 +1,142 @@
+/* Fondo completo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("proyecto imagenes/pc-5737958_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+/* Caja central con contenido */
+.contenido {
+    background-color: rgba(0, 0, 0, 0.5); /* transparencia para que se vea el fondo */
+    padding: 40px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Título */
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* .logo-nav {
+    color : white;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #00aced;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #00aced;
+}
+/* Ajustes para celular */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+/* Espacio para que el contenido no quede escondido bajo el menú */
+.contenido {
+    margin-top: 100px;
+}
+
+/* .fondo h1 {
+
+} */
